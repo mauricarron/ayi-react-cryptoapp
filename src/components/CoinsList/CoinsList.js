@@ -53,7 +53,7 @@ const CoinsList = ({ coinsList }) => {
               <TableCell align="right">{coin.priceChange1h}</TableCell>
               <TableCell align="right">{coin.price}</TableCell>
               <TableCell align="center">
-                <Link to={`coins/${coin.id}`}>
+                <Link to={`/coins/${coin.id}`}>
                   <IconButton aria-label="delete">
                     <ChevronRightIcon />
                   </IconButton>
