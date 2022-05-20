@@ -4,9 +4,25 @@
 
 ## To-do
 
-- Consola limpia
+- fetch coinsList
+  - id
+  - rank
+  - icon
+  - name
+  - symbol
+  - priceChange1h
+  - price
+- fetch coin
+  - priceChange1h
+  - priceChange1d
+  - priceChange1w
+  - websiteUrl
+  - redditUrl
+  - twitterUrl
 
 ## Polish
+
+- Consola limpia
 
 ## Structure
 

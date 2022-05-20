@@ -1,4 +1,5 @@
 import CoinsContainer from "../../components/CoinsCointainer/CoinsContainer";
+import CoinsList from "../../components/CoinsList/CoinsList";
 
 const Home = () => {
   return (

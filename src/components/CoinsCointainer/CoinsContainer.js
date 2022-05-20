@@ -3,6 +3,7 @@ import CoinsList from "../CoinsList/CoinsList";
 
 const CoinsContainer = () => {
   const [coinsList, setCoinsList] = useState();
+  const [loading, setLoading] = useState(true);
 
   const CURRENCY = "USD";
   const LIMIT = 10;
@@ -11,14 +12,13 @@ const CoinsContainer = () => {
   useEffect(() => {
     fetch(url)
       .then((data) => data.json())
-      .then((data) => setCoinsList(data.coins));
+      .then((data) => {
+        setCoinsList(data.coins);
+        setLoading(false);
+      });
   }, []);
 
-  return (
-    <>
-      <CoinsList coinsList={coinsList} />
-    </>
-  );
+  return <>{loading ? null : <CoinsList coinsList={coinsList} />}</>;
 };
 
 export default CoinsContainer;
