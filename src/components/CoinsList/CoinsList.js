@@ -46,10 +46,10 @@ const CoinsList = ({ coinsList }) => {
               <TableCell component="th" scope="row">
                 {coin.rank}
               </TableCell>
-              <TableCell>
+              <TableCell align="right">
                 <Avatar alt={coin.id} src={coin.icon} />
               </TableCell>
-              <TableCell>{coin.name}</TableCell>
+              <TableCell>{`${coin.name} / ${coin.symbol}`}</TableCell>
               <TableCell align="right">{coin.priceChange1h}</TableCell>
               <TableCell align="right">{coin.price}</TableCell>
               <TableCell align="center">

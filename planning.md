@@ -4,6 +4,8 @@
 
 ## To-do
 
+## API info
+
 - fetch coinsList
   - id
   - rank
@@ -22,7 +24,13 @@
 
 ## Polish
 
-- Consola limpia
+- Coins View
+  - Rank column width
+  - Name column with icon + name + symbol
+  - Change column with positive/negative color
+  - Price column with 2 decimals only
+  - Try table with dropdowns
+- Clean console
 
 ## Structure
 
