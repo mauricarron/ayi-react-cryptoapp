@@ -11,19 +11,6 @@ import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const CoinsList = ({ coinsList }) => {
-  console.log(coinsList);
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-
-  const rows = [
-    createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-    createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-    createData("Eclair", 262, 16.0, 24, 6.0),
-    createData("Cupcake", 305, 3.7, 67, 4.3),
-    createData("Gingerbread", 356, 16.0, 49, 3.9),
-  ];
-
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -50,10 +37,10 @@ const CoinsList = ({ coinsList }) => {
                 <Avatar alt={coin.id} src={coin.icon} />
               </TableCell>
               <TableCell>{`${coin.name} / ${coin.symbol}`}</TableCell>
-              <TableCell align="right">{coin.priceChange1h}</TableCell>
-              <TableCell align="right">{coin.price}</TableCell>
+              <TableCell align="right">{`${coin.priceChange1h}%`}</TableCell>
+              <TableCell align="right">{coin.price.toFixed(2)}</TableCell>
               <TableCell align="center">
-                <Link to={`coins/${coin.id}`}>
+                <Link to={`/coins/${coin.id}`}>
                   <IconButton aria-label="delete">
                     <ChevronRightIcon />
                   </IconButton>

@@ -4,23 +4,9 @@
 
 ## To-do
 
-## API info
-
-- fetch coinsList
-  - id
-  - rank
-  - icon
-  - name
-  - symbol
-  - priceChange1h
-  - price
-- fetch coin
-  - priceChange1h
-  - priceChange1d
-  - priceChange1w
-  - websiteUrl
-  - redditUrl
-  - twitterUrl
+- CoinDetailsView
+  - Loading Spinner
+  - Diseñar la tarjeta de coinInfo
 
 ## Polish
 
@@ -45,3 +31,21 @@
       - About us
       - 404
   - Footer
+
+## API info
+
+- fetch coinsList
+  - id
+  - rank
+  - icon
+  - name
+  - symbol
+  - priceChange1h
+  - price
+- fetch coin
+  - priceChange1h
+  - priceChange1d
+  - priceChange1w
+  - websiteUrl
+  - redditUrl
+  - twitterUrl

@@ -1,5 +1,11 @@
+import CoinsContainer from "../../components/CoinsContainer/CoinsContainer";
+
 const Coins = () => {
-  return <div>Coins</div>;
+  return (
+    <>
+      <CoinsContainer />
+    </>
+  );
 };
 
 export default Coins;
