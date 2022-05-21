@@ -1,5 +1,11 @@
+import CoinContainer from "../../components/CoinContainer/CoinContainer";
+
 const CoinDetail = () => {
-  return <div>CoinDetail</div>;
+  return (
+    <>
+      <CoinContainer />
+    </>
+  );
 };
 
 export default CoinDetail;

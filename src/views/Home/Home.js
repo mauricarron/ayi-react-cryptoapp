@@ -1,13 +1,7 @@
-import CoinsContainer from "../../components/CoinsCointainer/CoinsContainer";
-import CoinsList from "../../components/CoinsList/CoinsList";
+import CoinsContainer from "../../components/CoinsContainer/CoinsContainer";
 
 const Home = () => {
-  return (
-    <div>
-      Home
-      <CoinsContainer />
-    </div>
-  );
+  return <div>Home</div>;
 };
 
 export default Home;
