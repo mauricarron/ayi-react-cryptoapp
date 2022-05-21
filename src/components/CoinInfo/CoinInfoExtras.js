@@ -30,7 +30,7 @@ const CoinInfoExtras = ({ rank, websiteUrl, twitterUrl }) => {
         <Typography variant="h6" component="p">
           <TwitterIcon />
           <Link
-            href={websiteUrl}
+            href={twitterUrl}
             target="_blank"
             rel="noreferrer"
             color="inherit"

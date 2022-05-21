@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CoinInfo from "../CoinInfo/CoinInfo";
+import LoadingProgress from "../commons/LoadingProgress";
 
 const CoinContainer = () => {
   const { id } = useParams();
@@ -21,13 +22,7 @@ const CoinContainer = () => {
   }, [id]);
 
   return (
-    <>
-      {loading ? (
-        <p>La información se esta cargando</p>
-      ) : (
-        <CoinInfo coinInfo={coinInfo} />
-      )}
-    </>
+    <>{loading ? <LoadingProgress /> : <CoinInfo coinInfo={coinInfo} />}</>
   );
 };
 

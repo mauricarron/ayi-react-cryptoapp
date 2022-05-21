@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CoinsList from "../CoinsList/CoinsList";
+import LoadingProgress from "../commons/LoadingProgress";
 
 const CoinsContainer = () => {
   const [coinsList, setCoinsList] = useState();
@@ -18,7 +19,9 @@ const CoinsContainer = () => {
       });
   }, []);
 
-  return <>{loading ? null : <CoinsList coinsList={coinsList} />}</>;
+  return (
+    <>{loading ? <LoadingProgress /> : <CoinsList coinsList={coinsList} />}</>
+  );
 };
 
 export default CoinsContainer;
