@@ -4,10 +4,6 @@
 
 ## To-do
 
-- CoinDetailsView
-  - Loading Spinner
-  - Diseñar la tarjeta de coinInfo
-
 ## Polish
 
 - Coins View
