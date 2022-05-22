@@ -13,7 +13,6 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/coins" element={<Coins />} />
