@@ -5,7 +5,14 @@ import { Button, Grid, Typography } from "@mui/material";
 const NotFound = () => {
   return (
     <>
-      <Grid container spacing={2} direction="column" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        height="90vh"
+      >
         <Grid item>
           <Typography variant="h3" component="h1" mb={2}>
             Ooops! page not found
