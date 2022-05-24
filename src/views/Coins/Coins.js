@@ -1,9 +1,9 @@
-import CoinsContainer from "../../components/CoinsContainer/CoinsContainer";
+import CoinsListContainer from "../../components/CoinsListContainer/CoinsListContainer";
 
 const Coins = () => {
   return (
     <>
-      <CoinsContainer />
+      <CoinsListContainer />
     </>
   );
 };

@@ -11,15 +11,17 @@ const CoinContainer = () => {
 
   const CURRENCY = "USD";
   const url = `https://api.coinstats.app/public/v1/coins/${id}?currency=${CURRENCY}`;
+  const ARS_CCL = 200;
 
   useEffect(() => {
     fetch(url)
       .then((data) => data.json())
       .then((data) => {
+        data.coin.priceArs = data.coin.price * ARS_CCL;
         setCoinInfo(data.coin);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, url]);
 
   return (
     <>{loading ? <LoadingProgress /> : <CoinInfo coinInfo={coinInfo} />}</>

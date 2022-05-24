@@ -12,6 +12,7 @@ const CoinInfo = ({ coinInfo }) => {
     symbol,
     rank,
     price,
+    priceArs,
     priceChange1d,
     priceChange1h,
     priceChange1w,
@@ -39,7 +40,7 @@ const CoinInfo = ({ coinInfo }) => {
           spacing={2}
           alignItems="flex-end"
         >
-          <CoinInfoPrice price={price} />
+          <CoinInfoPrice price={price} priceArs={priceArs} />
           <CoinInfoChange
             priceChange1h={priceChange1h}
             priceChange1d={priceChange1d}
