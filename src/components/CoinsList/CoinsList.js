@@ -17,7 +17,11 @@ const CoinsList = ({ tableHeaders, tableRows }) => {
         <TableHead>
           <TableRow>
             {tableHeaders.map((header) => {
-              return <TableCell align={header.align}>{header.name}</TableCell>;
+              return (
+                <TableCell key={header.name} align={header.align}>
+                  {header.name}
+                </TableCell>
+              );
             })}
           </TableRow>
         </TableHead>
