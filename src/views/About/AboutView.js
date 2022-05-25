@@ -2,7 +2,7 @@ import { Avatar, Container, Grid, Typography } from "@mui/material";
 import Socials from "../../components/commons/Socials";
 import img from "./aboutme.jpg";
 
-const About = () => {
+const AboutView = () => {
   return (
     <>
       <Container
@@ -43,4 +43,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutView;

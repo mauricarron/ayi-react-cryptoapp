@@ -3,7 +3,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const HomeView = () => {
   return (
     <>
       <Grid container spacing={2} p={2} alignItems="center" height="90vh">
@@ -27,4 +27,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeView;

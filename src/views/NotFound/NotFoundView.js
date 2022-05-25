@@ -2,7 +2,7 @@ import img from "./404.png";
 import { Link } from "react-router-dom";
 import { Button, Grid, Typography } from "@mui/material";
 
-const NotFound = () => {
+const NotFoundView = () => {
   return (
     <>
       <Grid
@@ -31,4 +31,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundView;
