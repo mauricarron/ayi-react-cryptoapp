@@ -10,37 +10,34 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const CoinsList = ({ coinsList }) => {
+const CoinsList = ({ tableHeaders, tableRows }) => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Rank</TableCell>
-            <TableCell>CoinAvatar</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Change</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="center">More Info</TableCell>
+            {tableHeaders.map((header) => {
+              return <TableCell align={header.align}>{header.name}</TableCell>;
+            })}
           </TableRow>
         </TableHead>
         <TableBody>
-          {coinsList.map((coin) => (
+          {tableRows.map((row) => (
             <TableRow
-              key={coin.id}
+              key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {coin.rank}
+                {row.rank}
               </TableCell>
               <TableCell align="right">
-                <Avatar alt={coin.id} src={coin.icon} />
+                <Avatar alt={row.id} src={row.icon} />
               </TableCell>
-              <TableCell>{`${coin.name} / ${coin.symbol}`}</TableCell>
-              <TableCell align="right">{`${coin.priceChange1h}%`}</TableCell>
-              <TableCell align="right">{coin.price.toFixed(2)}</TableCell>
+              <TableCell>{`${row.name} / ${row.symbol}`}</TableCell>
+              <TableCell align="right">{`${row.priceChange1h}%`}</TableCell>
+              <TableCell align="right">{row.price.toFixed(2)}</TableCell>
               <TableCell align="center">
-                <Link to={`/coins/${coin.id}`}>
+                <Link to={`/coins/${row.id}`}>
                   <IconButton aria-label="delete">
                     <ChevronRightIcon />
                   </IconButton>

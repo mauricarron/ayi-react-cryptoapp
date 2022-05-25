@@ -1,8 +1,6 @@
 import { Typography, Grid } from "@mui/material";
 
-const CoinInfoPrice = ({ price }) => {
-  const ARS_CCL = 200;
-
+const CoinInfoPrice = ({ price, priceArs }) => {
   return (
     <>
       <Typography variant="h5">Price</Typography>
@@ -19,7 +17,7 @@ const CoinInfoPrice = ({ price }) => {
           ARS
         </Typography>
         <Typography variant="h1" component="h2" mb={4}>
-          {(price * ARS_CCL).toFixed(2)}
+          {priceArs.toFixed(2)}
         </Typography>
       </Grid>
     </>
