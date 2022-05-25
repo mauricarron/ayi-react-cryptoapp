@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Typography, Grid, Link } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -42,6 +43,12 @@ const CoinInfoExtras = ({ rank, websiteUrl, twitterUrl }) => {
       </Grid>
     </Grid>
   );
+};
+
+CoinInfoExtras.propTypes = {
+  rank: PropTypes.number.isRequired,
+  websiteUrl: PropTypes.string.isRequired,
+  twitterUrl: PropTypes.string.isRequired,
 };
 
 export default CoinInfoExtras;

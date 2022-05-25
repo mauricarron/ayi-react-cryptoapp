@@ -1,13 +1,16 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Avatar,
+  IconButton,
+} from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const CoinsList = ({ tableHeaders, tableRows }) => {
@@ -53,6 +56,26 @@ const CoinsList = ({ tableHeaders, tableRows }) => {
       </Table>
     </TableContainer>
   );
+};
+
+CoinsList.propTypes = {
+  tableHeaders: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      align: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  tableRows: PropTypes.arrayOf(
+    PropTypes.shape({
+      rank: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      symbol: PropTypes.string.isRequired,
+      priceChange1h: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default CoinsList;
