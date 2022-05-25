@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Typography, Grid } from "@mui/material";
 
 const CoinInfoPrice = ({ price, priceArs }) => {
@@ -22,6 +23,11 @@ const CoinInfoPrice = ({ price, priceArs }) => {
       </Grid>
     </>
   );
+};
+
+CoinInfoPrice.propTypes = {
+  price: PropTypes.number.isRequired,
+  priceArs: PropTypes.number.isRequired,
 };
 
 export default CoinInfoPrice;

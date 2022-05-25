@@ -1,5 +1,5 @@
-import Grid from "@mui/material/Grid";
-import { Avatar, Container, Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import { Avatar, Typography, Grid } from "@mui/material";
 
 const CoinInfoHeader = ({ id, icon, name, symbol }) => {
   return (
@@ -17,6 +17,13 @@ const CoinInfoHeader = ({ id, icon, name, symbol }) => {
       </Grid>
     </Grid>
   );
+};
+
+CoinInfoHeader.propTypes = {
+  id: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
 };
 
 export default CoinInfoHeader;

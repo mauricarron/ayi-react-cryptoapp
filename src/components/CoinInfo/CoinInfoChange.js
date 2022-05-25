@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Grid, Typography, Tooltip } from "@mui/material";
 
 const CoinInfoChange = ({ priceChange1h, priceChange1d, priceChange1w }) => {
@@ -64,6 +65,12 @@ const CoinInfoChange = ({ priceChange1h, priceChange1d, priceChange1w }) => {
       </Grid>
     </>
   );
+};
+
+CoinInfoChange.propTypes = {
+  priceChange1h: PropTypes.number.isRequired,
+  priceChange1d: PropTypes.number.isRequired,
+  priceChange1w: PropTypes.number.isRequired,
 };
 
 export default CoinInfoChange;
