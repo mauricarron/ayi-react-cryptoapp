@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import CoinInfo from "../CoinInfo/CoinInfo";
 import LoadingProgress from "../commons/LoadingProgress";
 
-const CoinContainer = () => {
+const CoinInfoContainer = () => {
   const { id } = useParams();
 
   const [coinInfo, setCoinInfo] = useState();
@@ -28,4 +28,4 @@ const CoinContainer = () => {
   );
 };
 
-export default CoinContainer;
+export default CoinInfoContainer;

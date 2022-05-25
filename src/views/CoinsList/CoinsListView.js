@@ -1,6 +1,6 @@
 import CoinsListContainer from "../../components/CoinsListContainer/CoinsListContainer";
 
-const Coins = () => {
+const CoinsListView = () => {
   return (
     <>
       <CoinsListContainer />
@@ -8,4 +8,4 @@ const Coins = () => {
   );
 };
 
-export default Coins;
+export default CoinsListView;

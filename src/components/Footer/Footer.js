@@ -17,7 +17,7 @@ const Footer = () => {
       <Paper elevation={10}>
         <Toolbar sx={{ justifyContent: "flex-end" }}>
           <Typography>
-            Hecho con mucho 💚 para <b>AYI Academy</b>{" "}
+            Developed with 💚 for <b>AYI Academy</b>{" "}
             <Link
               href="https://www.linkedin.com/in/uricarron/"
               target="_blank"
@@ -27,7 +27,7 @@ const Footer = () => {
             >
               @Carron Mauricio David
             </Link>{" "}
-            | Mayo 2022
+            | May 2022
           </Typography>
         </Toolbar>
       </Paper>
