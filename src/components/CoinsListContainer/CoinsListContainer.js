@@ -11,6 +11,15 @@ const CoinsListContainer = () => {
   const url = `https://api.coinstats.app/public/v1/coins?skip=0&limit=${LIMIT}&currency=${CURRENCY}`;
   const ARS_CCL = 200;
 
+  const tableHeaders = [
+    { name: "Rank", align: "left" },
+    { name: "Icon", align: "left" },
+    { name: "Name", align: "left" },
+    { name: "Change", align: "right" },
+    { name: "Price", align: "right" },
+    { name: "More Info", align: "center" },
+  ];
+
   useEffect(() => {
     fetch(url)
       .then((data) => data.json())
@@ -37,7 +46,13 @@ const CoinsListContainer = () => {
   }, [url]);
 
   return (
-    <>{loading ? <LoadingProgress /> : <CoinsList coinsList={coinsList} />}</>
+    <>
+      {loading ? (
+        <LoadingProgress />
+      ) : (
+        <CoinsList tableHeaders={tableHeaders} tableRows={coinsList} />
+      )}
+    </>
   );
 };
 
