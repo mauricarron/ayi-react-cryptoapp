@@ -22,6 +22,7 @@ const CoinInfoChange = ({ priceChange1h, priceChange1d, priceChange1w }) => {
           <Typography
             variant="h6"
             component="p"
+            sx={{ color: priceChange1h >= 0 ? "green" : "red" }}
           >{`${priceChange1h}%`}</Typography>
         </Grid>
 
@@ -41,6 +42,7 @@ const CoinInfoChange = ({ priceChange1h, priceChange1d, priceChange1w }) => {
           <Typography
             variant="h6"
             component="p"
+            sx={{ color: priceChange1h >= 0 ? "green" : "red" }}
           >{`${priceChange1d}%`}</Typography>
         </Grid>
 
@@ -60,6 +62,7 @@ const CoinInfoChange = ({ priceChange1h, priceChange1d, priceChange1w }) => {
           <Typography
             variant="h6"
             component="p"
+            sx={{ color: priceChange1h > 0 ? "green" : "red" }}
           >{`${priceChange1w}%`}</Typography>
         </Grid>
       </Grid>

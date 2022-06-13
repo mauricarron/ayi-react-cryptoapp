@@ -10,6 +10,7 @@ import {
   Paper,
   Avatar,
   IconButton,
+  Tooltip,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
@@ -41,8 +42,17 @@ const CoinsList = ({ tableHeaders, tableRows }) => {
                 <Avatar alt={row.id} src={row.icon} />
               </TableCell>
               <TableCell>{`${row.name} / ${row.symbol}`}</TableCell>
-              <TableCell align="right">{`${row.priceChange1h}%`}</TableCell>
-              <TableCell align="right">{row.price.toFixed(2)}</TableCell>
+              <Tooltip title="Price Change per 1hr">
+                <TableCell
+                  align="right"
+                  sx={{ color: row.priceChange1h >= 0 ? "green" : "red" }}
+                >{`${row.priceChange1h}%`}</TableCell>
+              </Tooltip>
+              <Tooltip title="USD">
+                <TableCell align="right">{`$${row.price.toFixed(
+                  2
+                )}`}</TableCell>
+              </Tooltip>
               <TableCell align="center">
                 <Link to={`/coins/${row.id}`}>
                   <IconButton aria-label="delete">
